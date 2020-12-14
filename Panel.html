@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Show/Open a panel</title>
+        <style>
+            #show{
+                padding: 10px 20px;
+                background: red;
+                color: white;
+                font-size: medium;
+                margin-bottom: 10px;
+                border: none;
+            }
+            #show:hover{
+                background: #E2E2E2;
+                color: black;
+                cursor: pointer;
+                border: none;
+            }
+            span{
+                background: red;
+                color: white;
+                border: none;
+                float: right;
+                padding: 10px 15px;
+            }
+            span:hover{
+                background: #E2E2E2;
+                color: black;
+                border: none;
+                cursor: pointer;
+                padding: 10px 15px;
+            }
+            #b-content{
+                background:#00A374;
+                color: white;
+                padding-left: 20px;
+                padding-bottom: 10px;
+                display: none;
+            }
+            #content{
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="show" onclick="document.getElementById('b-content').style.display='block'">
+            Show panel
+        </button>
+        <div id="b-content">
+            <span onclick="this.parentElement.style.display='none'">X</span>
+            <div id="content">
+                <p>Click on the X to close this panel.</p>
+                <p>Click on the X to close this panel.</p>
+            </div>
+        </div>
+    </body>
+</html>
